@@ -9,23 +9,26 @@ class Heroi {
         let ataque;
         switch (this.tipo) {
             case "mago":
-                ataque = "usou magia";
+                ataque = "usou magia!";
                 break;
             case "guerreiro":
-                ataque = "usou espada";
+                ataque = "usou espada!";
                 break;
             case "monge":
-                ataque = "usou artes marciais";
+                ataque = "usou artes marciais!";
                 break;
             case "ninja":
-                ataque = "usou shuriken";
+                ataque = "usou shuriken!";
                 break;
             default:
-                ataque = "não tem um ataque definido";
+                ataque = "não tem um ataque definido!";
         }
 
-        console.log(`O ${this.tipo} atacou usando ${ataque}`);
+        console.log(`O ${this.tipo}, atacou usando ${ataque}`);
     }
 };
 
-dado.atacar(); // Saída: "O guerreiro atacou usando usou espada"
+const jogador =  new Heroi('Pedro', 30, 'mago');
+const jogador2 = new Heroi('Maria', 22, 'ninja')
+jogador.atacar();
+jogador2.atacar();
